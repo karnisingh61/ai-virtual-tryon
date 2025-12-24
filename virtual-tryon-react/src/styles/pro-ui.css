@@ -1,0 +1,98 @@
+/* Background Animated Nebula */
+.bg-ultra {
+  background: radial-gradient(circle at 20% 20%, rgba(0,200,255,0.3), transparent 50%),
+              radial-gradient(circle at 80% 0%, rgba(255,0,150,0.3), transparent 50%),
+              radial-gradient(circle at 50% 100%, rgba(0,120,255,0.3), transparent 50%),
+              #0d0d16;
+  background-size: cover;
+}
+
+/* Frosted Glass Panels */
+.glass {
+  backdrop-filter: blur(22px) saturate(180%);
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: 0.35s ease;
+}
+
+.glass:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 45px rgba(0,255,255,0.25);
+}
+
+/* 3D Hover Tilt */
+.tilt {
+  transition: transform 0.2s ease-out;
+}
+.tilt:hover {
+  transform: perspective(700px) rotateX(6deg) rotateY(-6deg);
+}
+
+/* Neon Button */
+.btn-pro {
+  background: linear-gradient(90deg, #00d4ff, #0066ff);
+  padding: 14px 40px;
+  border-radius: 14px;
+  font-weight: 700;
+  color: white;
+  font-size: 21px;
+  transition: 0.3s;
+  box-shadow: 0 0 22px rgba(0,153,255,0.5);
+  border: none;
+}
+
+.btn-pro:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(0,153,255,0.8);
+}
+
+/* Fade-in Animations */
+.fade-slow {
+  animation: fadeInSlow 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInSlow {
+  to { opacity: 1; }
+}
+
+/* Loading Glow */
+.loader-glow {
+  background: linear-gradient(90deg, #ffffff15, #ffffff40, #ffffff15);
+  background-size: 200% 100%;
+  animation: glowMove 1.6s infinite;
+  border-radius: 14px;
+}
+
+@keyframes glowMove {
+  from { background-position: -200% 0; }
+  to   { background-position: 200% 0; }
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 40px;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(25px);
+  background: rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+}
+
+.footer {
+  text-align: center;
+  color: #ccc;
+  padding: 40px 0;
+}

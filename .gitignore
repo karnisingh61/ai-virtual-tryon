@@ -1,0 +1,21 @@
+# Node
+node_modules/
+npm-debug.log
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# AI / Model
+checkpoints/
+tensorboard/
+data/
+result/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env

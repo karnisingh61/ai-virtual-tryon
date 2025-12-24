@@ -1,0 +1,77 @@
+/* Background animated gradient */
+.bg-animated {
+  background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Neon glow effect */
+.neon-box {
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.neon-box:hover {
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.6);
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* Fade-in smooth animations */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* 3D Hover Tilt */
+.tilt-card {
+  transition: transform 0.2s ease;
+}
+
+.tilt-card:hover {
+  transform: perspective(600px) rotateX(6deg) rotateY(-6deg);
+}
+
+/* Shiny gradient button */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glow::after {
+  content: "";
+  position: absolute;
+  top: -120%;
+  left: -120%;
+  width: 250%;
+  height: 250%;
+  background: radial-gradient(circle, rgba(255,255,255,0.6), transparent 60%);
+  transform: rotate(45deg);
+  animation: shineMove 4s infinite linear;
+}
+
+@keyframes shineMove {
+  0% { transform: translateX(-200%) translateY(-200%) rotate(45deg); }
+  100% { transform: translateX(200%) translateY(200%) rotate(45deg); }
+}
+
+/* Loading shimmer */
+.shimmer {
+  background: linear-gradient(90deg, #ffffff11, #ffffff33, #ffffff11);
+  background-size: 200% 100%;
+  animation: shimmerMove 1.5s infinite;
+}
+
+@keyframes shimmerMove {
+  from { background-position: -200% 0; }
+  to   { background-position: 200% 0; }
+}
